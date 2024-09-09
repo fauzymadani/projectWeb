@@ -1,124 +1,134 @@
-body {
-  font-family: "Arial", sans-serif;
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ffffff;
-  color: #333;
 }
 
-section {
-  padding: 60px 20px;
-  text-align: center;
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #fff;
+  color: #1f2937;
 }
 
-#hero {
-  background: url("hero-background.jpg") no-repeat center center/cover;
-  color: #fff;
-  padding: 150px 20px;
-}
-
-#hero .content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-#hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-#hero p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-#hero .buttons button {
-  padding: 15px 30px;
-  margin: 0 10px;
-  font-size: 1rem;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#about {
-  background-color: #f8f9fa;
-  padding: 80px 20px;
-}
-
-#about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-#products .product {
-  background-color: #e9ecef;
-  padding: 30px;
-  margin: 20px 0;
-  border-radius: 10px;
+header {
+  background-color: #f9fafb;
+  padding: 1rem 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#products h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-#products button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  font-size: 1rem;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#technologies .tech-list {
+.navbar {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 20px 0;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#technologies .tech-list span {
-  margin: 5px 10px;
-  padding: 5px 15px;
-  background-color: #007bff;
-  color: #fff;
-  border-radius: 5px;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-#contact {
-  background-color: #343a40;
-  color: #fff;
-  padding: 100px 20px;
+.logo img {
+  width: 50px;
+  margin-right: 0.5rem;
 }
 
-#contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.logo h1 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
 }
 
-#contact form input {
-  padding: 10px;
-  margin-top: 10px;
-  width: 80%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.logo p {
+  font-size: 0.875rem;
+  color: #6b7280;
 }
 
-#contact form button {
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu li {
+  margin-left: 1.5rem;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu a::after {
+  content: "▼";
+  font-size: 0.6rem;
+  position: absolute;
+  right: -0.6rem;
+  top: 0;
+  color: red;
+}
+
+.order-btn {
+  background-color: #f87171;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  align-items: center;
+}
+
+.text-content h2 {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.text-content h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.text-content p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more {
+  background-color: #4b5563;
+}
+
+.get-started {
+  background-color: #10b981;
+}
+
+.code-image img {
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

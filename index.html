@@ -3,79 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webbler Tech</title>
+    <title>Webbler Technologies</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <!-- pertama -->
-    <section id="hero">
-      <div class="content">
-        <h1>
-          Your Dream Website <br />
-          Start with Us!!
-        </h1>
-        <p>
-          Webbler Tech menyediakan berbagai macam jasa website yang berkualitas
-        </p>
-        <div class="buttons">
-          <button onclick="location.href='#learn-more'">Learn more</button>
-          <button onclick="location.href='#get-started'">Get started</button>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="logo.png" alt="Webbler Logo" />
+          <h1>Webbler Technologies</h1>
+          <p>Empower your digital life!</p>
         </div>
-      </div>
-    </section>
+        <ul class="menu">
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Konsultasi</a></li>
+          <li><a href="#" class="order-btn">Order</a></li>
+        </ul>
+        <button class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
 
-    <!-- About Section -->
-    <section id="about">
-      <h2>Webbler Technologies</h2>
-      <p>Empower your digital Life!</p>
-    </section>
-
-    <!-- Product Section -->
-    <section id="products">
-      <h2>Produk Unggulan Kami</h2>
-      <div class="product">
-        <h3>Web Design</h3>
-        <p>Custom Design web Sesuka hati kamu</p>
-        <button>Order now</button>
-      </div>
-      <div class="product">
-        <h3>Web Building</h3>
-        <p>
-          Buat sebuah Website yang Siap Di Deploy Langsung!, bisa pake
-          framework!!
-        </p>
-        <button>Order now</button>
-      </div>
-    </section>
-
-    <!-- Technologies Section -->
-    <section id="technologies">
-      <h2>Teknologi yang kami Gunakan</h2>
-      <div class="tech-list">
-        <span>Web Pack</span>
-        <span>Tailwind</span>
-        <span>Docker</span>
-        <span>Laravel</span>
-        <span>Mariadb</span>
-        <span>PHP</span>
-        <span>Composer</span>
-      </div>
-      <button>Build now</button>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Order and Contact Us!</h2>
-      <p>Phone: 876234726</p>
-      <p>Email: webbler@gmail.com</p>
-      <form>
-        <input type="email" placeholder="Enter your email" required />
-        <button type="submit">Submit</button>
-      </form>
-      <p>powered by fauzymadani.infinityfreeapp.com</p>
-      <p>copyright © 2024 Webbler Tech PT.Webbler Technologies</p>
-    </section>
-
-    <script src="script.js"></script>
+    <main>
+      <section class="hero">
+        <div class="text-content">
+          <h2>#WebBerkualitas</h2>
+          <h1>Your Dream Website<br />Start with Us!!</h1>
+          <p>
+            Webbler Tech menyediakan berbagai macam jasa website yang
+            berkualitas
+          </p>
+          <div class="buttons">
+            <a href="#" class="btn learn-more">Learn more</a>
+            <a href="#" class="btn get-started">Get started</a>
+          </div>
+        </div>
+        <div class="code-image">
+          <img src="code-sample.png" alt="Code Example" />
+        </div>
+      </section>
+    </main>
   </body>
 </html>
