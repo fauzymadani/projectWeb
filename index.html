@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webbler Technologies</title>
+    <title>Deb Technologies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -11,44 +17,162 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">
-          <img src="logo.png" alt="Webbler Logo" />
-          <h1>Webbler Technologies</h1>
-          <p>Empower your digital life!</p>
-        </div>
-        <ul class="menu">
-          <li><a href="#">Product</a></li>
-          <li><a href="#">Konsultasi</a></li>
-          <li><a href="#" class="order-btn">Order</a></li>
-        </ul>
-        <button class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </nav>
-    </header>
+    <section class="section-1">
+      <header>
+        <nav class="navbar">
+          <div class="logo">
+            <img class="logo-image" src="images/logo.png" alt="Webbler Logo" />
+            <h1>Deb Technologies</h1>
+            <p>Empower your digital life!</p>
+          </div>
+          <ul class="menu">
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Konsultasi</a></li>
+            <li>
+              <a href="#"
+                ><button type="button" class="btn btn-warning">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  Order
+                </button></a
+              >
+            </li>
+          </ul>
+          <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </nav>
+      </header>
 
-    <main>
-      <section class="hero">
-        <div class="text-content">
-          <h2>#WebBerkualitas</h2>
-          <h1>Your Dream Website<br />Start with Us!!</h1>
-          <p>
-            Webbler Tech menyediakan berbagai macam jasa website yang
-            berkualitas
-          </p>
-          <div class="buttons">
-            <a href="#" class="btn learn-more">Learn more</a>
-            <a href="#" class="btn get-started">Get started</a>
+      <main>
+        <section class="hero">
+          <div class="text-content">
+            <h2>#WebBerkualitas</h2>
+            <h1>Your Dream Website<br />Start with Us!!</h1>
+            <p>
+              Webbler Tech menyediakan berbagai macam jasa website yang
+              berkualitas
+            </p>
+            <div class="buttons">
+              <a href="#" class="btn learn-more">Learn more</a>
+              <a href="#" class="btn get-started">Get started</a>
+            </div>
+          </div>
+          <div class="code-image">
+            <img
+              src="images/Screenshot from 2024-08-22 20-28-13.png"
+              alt="Code Example"
+            />
+          </div>
+        </section>
+      </main>
+    </section>
+    <section class="section-2">
+      <h2 class="BuildText">#Build Your Website Now</h2>
+      <h1 class="subheader">Produk unggulan kami</h1>
+      <!-- card section -->
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <img
+                src="images/Screenshot from 2024-08-22 20-28-13.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Web Design</h5>
+                <p class="card-text">
+                  Make Your own custom web design. make your web design come
+                  <strong>True!</strong>
+                </p>
+                <a href="#" class="btn btn-primary"
+                  ><i class="fa-solid fa-cart-shopping"></i>Order</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <img
+                src="images/Screenshot from 2024-08-22 20-28-13.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Web Building</h5>
+                <p class="card-text">
+                  Buat Website mu dengan tech stack yang kami tawarkan, bisa
+                  pakai <strong>Framework</strong> dan siap di
+                  <strong>Deploy</strong>
+                </p>
+                <a href="#" class="btn btn-primary"
+                  ><i class="fa-solid fa-cart-shopping"></i>Order</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <img
+                src="images/Screenshot from 2024-08-22 20-28-13.png"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Linux Ricing</h5>
+                <p class="card-text">
+                  Custom DE linux mu, cocok buat yang malas Ricing desktop nya!.
+                  kami udah jago
+                </p>
+                <a href="#" class="btn btn-primary"
+                  ><i class="fa-solid fa-cart-shopping"></i>Order</a
+                >
+              </div>
+            </div>
           </div>
         </div>
-        <div class="code-image">
-          <img src="code-sample.png" alt="Code Example" />
-        </div>
-      </section>
-    </main>
+      </div>
+      <!-- end card section -->
+    </section>
+    <section class="section-3">
+      <h2 class="BuildText2"><i class="fa-solid fa-code"></i> #BuildNow!</h2>
+      <h1 class="subheader2">
+        <i class="fa-solid fa-microchip"></i> Teknologi yang kami gunakan
+      </h1>
+    </section>
+    <section class="section-4">
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"
+          >Example textarea</label
+        >
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/364501d36f.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

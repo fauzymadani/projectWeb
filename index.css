@@ -17,12 +17,14 @@ header {
   background-color: #f9fafb;
   padding: 1rem 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 97px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 50px;
 }
 
 .logo {
@@ -31,7 +33,7 @@ header {
 }
 
 .logo img {
-  width: 50px;
+  width: 80px;
   margin-right: 0.5rem;
 }
 
@@ -63,7 +65,7 @@ header {
 }
 
 .menu a::after {
-  content: "▼";
+  content: "";
   font-size: 0.6rem;
   position: absolute;
   right: -0.6rem;
@@ -131,6 +133,7 @@ header {
   width: 400px;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 14px black;
 }
 
 .learn-more:hover {
@@ -138,7 +141,7 @@ header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
   transition: all 0.3s ease;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 15px black;
   transition: background-color 0.5s ease, transform 1.5s ease,
     box-shadow 1s ease;
 }
@@ -148,7 +151,54 @@ header {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
   transition: all 0.3s ease;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 10px 10px 15px black;
   transition: background-color 0.5s ease, transform 1.5s ease,
     box-shadow 1s ease;
+}
+
+.section-1 {
+  height: 600px;
+}
+
+.section-2 {
+  height: 600px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.BuildText {
+  color: #3b82f6;
+  font-weight: 500;
+  text-align: center;
+}
+
+.subheader {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-3 {
+  height: 600px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.BuildText2 {
+  text-align: start;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.subheader2 {
+  text-align: start;
+}
+
+.card {
+  box-shadow: 3px 3px 1px black;
+}
+
+.section-4 {
+  height: 600px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
