@@ -161,7 +161,7 @@ header {
 }
 
 .section-2 {
-  height: 600px;
+  height: 750px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -201,4 +201,127 @@ header {
   height: 600px;
   padding-left: 60px;
   padding-right: 60px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.text-header {
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.contact-header {
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-square-instagram,
+.fa-envelope,
+.fa-tiktok {
+  font-size: 30px;
+  transition: transform 0.5s;
+}
+.fa-square-instagram:hover,
+.fa-envelope:hover,
+.fa-tiktok:hover {
+  color: #10b981;
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card-custom {
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  padding: 5px;
+  max-width: 250px;
+  text-align: center;
+  width: 300px;
+}
+
+.card-custom img {
+  width: 50px;
+}
+
+.card-custom h5 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.card-custom p {
+  color: gray;
+  margin-bottom: 0;
+}
+
+/* add media query coy */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  .menu li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .order-btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .code-image img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
+  }
+
+  .section-1, .section-2, .section-3, .section-4 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .text-header {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
 }
