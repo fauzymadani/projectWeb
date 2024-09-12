@@ -221,13 +221,15 @@ header {
 
 .fa-square-instagram,
 .fa-envelope,
-.fa-tiktok {
+.fa-tiktok,
+.fa-phone {
   font-size: 30px;
   transition: transform 0.5s;
 }
 .fa-square-instagram:hover,
 .fa-envelope:hover,
-.fa-tiktok:hover {
+.fa-tiktok:hover,
+.fa-phone:hover {
   color: #10b981;
   transform: translateY(-5px);
   cursor: pointer;
@@ -261,8 +263,27 @@ header {
   margin-bottom: 0;
 }
 
+.logo-image {
+  height: 100px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.fa-envelope {
+  font-size: 25px;
+}
+
+.fa-phone {
+  font-size: 30px;
+}
+
 /* add media query coy */
-@media (max-width: 768px) {
+@media only screen and (max-width: 500px) {
+
+  .text-content {
+    font-size: 10px;
+  }
+
   .navbar {
     flex-direction: column;
     align-items: center;

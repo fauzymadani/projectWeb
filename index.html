@@ -18,34 +18,44 @@
   </head>
   <body>
     <section class="section-1">
-      <header>
-        <nav class="navbar">
-          <div class="logo">
-            <img class="logo-image" src="images/logo.png" alt="Webbler Logo" />
-            <div class="logo-text">
-            <h1>Deb Technologies</h1>
-            <p>Empower your digital life!</p>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <img src="images/logo.png" alt="" class="logo-image">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Konsultasi</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Order
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Web Design</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Web Building</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Linux Ricing</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <button class="btn btn-warning">Order</button>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
           </div>
-          </div>
-          <ul class="menu">
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Konsultasi</a></li>
-            <li>
-              <a href="#"
-                ><button type="button" class="btn btn-warning">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  Order
-                </button></a
-              >
-            </li>
-          </ul>
-          <button class="menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </nav>
-      </header>
 
       <main>
         <section class="hero">
@@ -192,41 +202,34 @@
         <div class="container text-center">
           <div class="row">
             <div class="col">
-              <i class="fa-brands fa-square-instagram"></i>
+              <div class="container overflow-hidden text-center">
+                <div class="row gy-5">
+                  <div class="col-6">
+                    <div class="p-1"><i class="fa-solid fa-phone"></i> <p>+62089678824565</p></div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3"></div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-1"><i class="fa-solid fa-envelope"></i> <p>debtech@gmail.com</p></div>
+                  </div>
+                  
+                </div>
+              </div>
             </div>
             <div class="col">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="col">
-              <i class="fa-brands fa-tiktok"></i>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email Anda</label>
+                <input type="email" class="form-control border-success" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+                <textarea class="form-control border-success" id="exampleFormControlTextarea1" rows="3" placeholder="Pesan atau orderan anda..."></textarea>
+              </div>
+              <button class="btn btn-primary">Submit</button>
             </div>
           </div>
         </div>
-      </div></span>
-      <div class="mb-3">
-        <label for="exampleFormControlInput1" class="form-label"
-          >Email address</label
-        >
-        <input
-          type="email"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="name@example.com"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Messages</label
-        >
-        <textarea
-          class="form-control"
-          id="exampleFormControlTextarea1"
-          rows="3"
-          placeholder="Your Messages....."
-        ></textarea>
-      </div>
-      <button type="button" class="btn btn-info"><i class="fa-solid fa-paper-plane"></i>Submit</button>
-      <footer class="last-footer"></footer>
     </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
