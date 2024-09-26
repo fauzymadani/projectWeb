@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <style>
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        border: 1px solid #ccc;
+        padding: 8px;
+        margin: 2px 0;
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #8f8f8f;
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: inset 0 0 8px #e5e8e7;
+      }
+      input[type="submit"] {
+        border: none;
+        padding: 8px 25px;
+        margin: 2px 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        background: #0d7963;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" class="myform" action="process-form.php">
+      <input type="text" name="name" placeholder="Your Name" required /><br />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      /><br />
+      <textarea
+        rows="4"
+        cols="20"
+        name="message"
+        placeholder="Your Message"
+      ></textarea
+      ><br />
+      <input type="submit" name="send" value="Send" />
+      <span class="output_message"></span>
+    </form>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Your custom jQuery code -->
+    <script>
+      $(document).ready(function () {
+        $(".myform").on("submit", function () {
+          // Add text 'loading...' right after clicking on the submit button.
+          var form = $(this);
+          console.log(form.serialize()); // Memeriksa apakah data sudah benar
+
+          $(".output_message").text("Loading...");
+
+          var form = $(this);
+          $.ajax({
+            url: form.attr("action"),
+            method: form.attr("method"),
+            data: form.serialize(),
+            success: function (result) {
+              if (result === "success") {
+                $(".output_message").text("Message Sent!");
+              } else {
+                $(".output_message").text("Error Sending email!");
+              }
+            },
+            error: function (xhr, status, error) {
+              $(".output_message").text("Error: " + error); // Log error di output_message
+            },
+          });
+
+          // Prevents default submission of the form after clicking on the submit button.
+          return false;
+        });
+      });
+    </script>
+
+    <!-- Other libraries and scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/usetheme@latest"></script>
+  </body>
+</html>
