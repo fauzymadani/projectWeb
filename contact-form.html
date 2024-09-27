@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <style>
       input[type="text"],
       input[type="email"],
@@ -32,9 +37,21 @@
         opacity: 0.9;
       }
     </style>
+    <link rel="stylesheet" href="contact-style.css" />
   </head>
   <body>
     <form method="post" class="myform" action="process-form.php">
+      <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Back
+      </a>      
+      <h2 style="text-align: center; color: #0d7963">
+        Get in Touch with Gruv Technology
+      </h2>
+      <p style="text-align: center; color: #666; font-size: 14px">
+        We'd love to hear from you! Whether you have a question or need
+        assistance, feel free to reach out to us. Fill out the form below, and
+        our team will get back to you as soon as possible.
+      </p>
       <input type="text" name="name" placeholder="Your Name" required /><br />
       <input
         type="email"
@@ -59,11 +76,23 @@
     <!-- Your custom jQuery code -->
     <script>
       $(document).ready(function () {
-        $(".myform").on("submit", function () {
-          // Add text 'loading...' right after clicking on the submit button.
-          var form = $(this);
-          console.log(form.serialize()); // Memeriksa apakah data sudah benar
+        // Animasi hover dan focus untuk form inputs
+        $('input[type="text"], input[type="email"], textarea').hover(
+          function () {
+            $(this).css("box-shadow", "0 0 12px rgba(13, 121, 99, 0.8)");
+          },
+          function () {
+            $(this).css("box-shadow", "none");
+          }
+        );
 
+        // Animasi saat tombol submit di-klik
+        $('input[type="submit"]').click(function () {
+          $(this).css("box-shadow", "0 0 12px rgba(255, 255, 255, 0.8)");
+        });
+
+        // Submit form menggunakan AJAX
+        $(".myform").on("submit", function () {
           $(".output_message").text("Loading...");
 
           var form = $(this);
@@ -73,17 +102,22 @@
             data: form.serialize(),
             success: function (result) {
               if (result === "success") {
-                $(".output_message").text("Message Sent!");
+                $(".output_message")
+                  .text("Thank you! Your message has been sent.")
+                  .css("color", "green");
               } else {
-                $(".output_message").text("Error Sending email!");
+                $(".output_message")
+                  .text("Oops! Something went wrong.")
+                  .css("color", "red");
               }
             },
             error: function (xhr, status, error) {
-              $(".output_message").text("Error: " + error); // Log error di output_message
+              $(".output_message")
+                .text("Error: " + error)
+                .css("color", "red");
             },
           });
 
-          // Prevents default submission of the form after clicking on the submit button.
           return false;
         });
       });
