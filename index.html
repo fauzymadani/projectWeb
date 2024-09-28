@@ -8,7 +8,7 @@
     <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,10 +76,27 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="#about-section" class="nav-item nav-link">About</a>
-              <a href="service.html" class="nav-item nav-link">Service</a>
-              <a href="project.html" class="nav-item nav-link">Project</a>
+              <a
+                href="index.html"
+                class="nav-item nav-link active"
+                data-link="/home"
+                >Home</a
+              >
+              <a href="about.html" class="nav-item nav-link" data-link="about"
+                >About</a
+              >
+              <a
+                href="service.html"
+                class="nav-item nav-link"
+                data-link="/service"
+                >Service</a
+              >
+              <a
+                href="project.html"
+                class="nav-item nav-link"
+                data-link="project"
+                >Project</a
+              >
               <div class="nav-item dropdown">
                 <a
                   href="#"
@@ -100,7 +117,9 @@
             <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block"
               >Get Started</a
             >
-            <a href="game.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block"
+            <a
+              href="game.html"
+              class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block"
               >Game</a
             >
           </div>
@@ -326,26 +345,35 @@
               </p>
               <h1 class="text-center text-white mb-4">Stay Always In Touch</h1>
               <p class="text-white mb-4">
-                Tetap Terhubung! Masukkan email Anda untuk mendapatkan berita terbaru.
+                Tetap Terhubung! Masukkan email Anda untuk mendapatkan berita
+                terbaru.
               </p>
-              <div class="position-relative w-100 mt-3">
-                <input
-                  class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                  type="text"
-                  placeholder="Enter Your Email"
-                  style="height: 48px"
-                />
-                <button
-                  type="button"
-                  class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
-                >
-                  <i class="fa fa-paper-plane text-primary fs-4"></i>
-                </button>
-              </div>
+              <form action="send-input.php" method="POST">
+                <div class="position-relative w-100 mt-3">
+                  <input
+                    class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
+                    type="email"
+                    name="email"
+                    placeholder="Enter Your Email"
+                    style="height: 48px"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"
+                  >
+                    <i class="fa fa-paper-plane text-primary fs-4"></i>
+                  </button>
+                </div>
+              </form>
+              <p id="sendingMessage" style="display: none; color: #ffffff">
+                Sedang mengirim...
+              </p>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Newsletter End -->
 
       <!-- Projects Start -->
@@ -363,7 +391,8 @@
             <div class="testimonial-item bg-light rounded my-4">
               <p class="fs-5">
                 <i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i
-                >Layanan Gruv Technology sangat membantu bisnis kami berkembang. Timnya sangat profesional dan responsif terhadap kebutuhan kami.
+                >Layanan Gruv Technology sangat membantu bisnis kami berkembang.
+                Timnya sangat profesional dan responsif terhadap kebutuhan kami.
               </p>
               <div class="d-flex align-items-center">
                 <img
@@ -380,7 +409,8 @@
             <div class="testimonial-item bg-light rounded my-4">
               <p class="fs-5">
                 <i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i
-                >Kami sangat terkesan dengan kualitas solusi teknologi yang ditawarkan. Hasilnya melebihi ekspektasi kami.
+                >Kami sangat terkesan dengan kualitas solusi teknologi yang
+                ditawarkan. Hasilnya melebihi ekspektasi kami.
               </p>
               <div class="d-flex align-items-center">
                 <img
@@ -397,7 +427,8 @@
             <div class="testimonial-item bg-light rounded my-4">
               <p class="fs-5">
                 <i class="fa fa-quote-left fa-4x text-primary mt-n4 me-3"></i
-                >Pengalaman bekerja dengan Gruv Technology sangat memuaskan. Solusi yang mereka tawarkan tepat sasaran.
+                >Pengalaman bekerja dengan Gruv Technology sangat memuaskan.
+                Solusi yang mereka tawarkan tepat sasaran.
               </p>
               <div class="d-flex align-items-center">
                 <img
@@ -544,7 +575,8 @@
                 Newsletter<span></span>
               </p>
               <p>
-                Ingin tahu update terbaru dari Gruv Technology? Masukkan email Anda.
+                Ingin tahu update terbaru dari Gruv Technology? Masukkan email
+                Anda.
               </p>
               <div class="position-relative w-100 mt-3">
                 <input
@@ -608,8 +640,59 @@
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/usetheme@latest"></script>
 
-
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- routing dengan fitur html 5 coy -->
+    <!-- <script src="route/route.js"></script> -->
+    <script src="route/routing.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var formData = new FormData(this);
+          var sendingMessage = document.getElementById("sendingMessage");
+
+          // Tampilkan pesan "Sedang mengirim"
+          sendingMessage.style.display = "block";
+
+          fetch("send-input.php", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              // Hilangkan pesan "Sedang mengirim" setelah respons diterima
+              sendingMessage.style.display = "none";
+
+              if (data.status === "success") {
+                Swal.fire({
+                  icon: "success",
+                  title: "Success!",
+                  text: data.message,
+                });
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: data.message,
+                });
+              }
+            })
+            .catch((error) => {
+              // Hilangkan pesan "Sedang mengirim" jika terjadi error
+              sendingMessage.style.display = "none";
+
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+              });
+            });
+        });
+    </script>
   </body>
 </html>

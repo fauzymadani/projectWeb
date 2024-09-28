@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+# Aturan untuk URL cantik
+RewriteRule ^about$ about.html [L]
+RewriteRule ^service$ service.html [L]
+RewriteRule ^contact$ contact.html [L]
+
+# Aturan untuk halaman 404 jika file tidak ditemukan
+ErrorDocument 404 /404.html
+
+
