@@ -25,4 +25,7 @@ docker-compose up --build
 docker run -d -p 8081:80 my-website
 ```
 
+## repo activity
+![Alt](https://repobeats.axiom.co/api/embed/b89923f3d77863a7db653e0c3ece4f154e82213d.svg "Repobeats analytics image")
+
 
